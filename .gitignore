@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output (will be generated on install via prepublishOnly)
+dist/
+
+# Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

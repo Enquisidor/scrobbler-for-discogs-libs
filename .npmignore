@@ -1,0 +1,11 @@
+# Source files (don't publish these, only dist/)
+src/
+tsconfig.json
+
+# Development files
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# Don't ignore dist/ - it should be published!

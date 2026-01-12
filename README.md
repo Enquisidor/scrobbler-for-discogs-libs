@@ -74,3 +74,37 @@ npm run watch
 3. **Type Safety** - Shared TypeScript types
 4. **Testability** - Test business logic once
 5. **Bundle Optimization** - Tree-shakeable exports
+
+## CI/CD
+
+### GitHub Actions
+
+The library uses GitHub Actions for continuous integration:
+
+- **Workflow**: `.github/workflows/build.yml`
+- **Triggers**: Push/PR to `main` or `develop` branches
+- **Node versions**: Tests on Node 20.x and 22.x
+- **Steps**:
+  1. Checkout code
+  2. Install dependencies with npm ci
+  3. Build library with npm run build
+  4. Verify build artifacts (dist/index.js, dist/index.d.ts)
+  5. Upload artifacts (Node 22.x only)
+
+### Status Badge
+
+```markdown
+![Build Status](https://github.com/YOUR_USERNAME/scrobbler-for-discogs-libs/workflows/Build%20and%20Test/badge.svg)
+```
+
+### Web and Mobile App CI
+
+Both web and mobile app repositories have their own GitHub Actions workflows that:
+
+1. Check out the app repository
+2. Check out the shared library repository
+3. Build the shared library
+4. Install and link the library locally
+5. Build and test the app
+
+This ensures that changes to the shared library don't break dependent applications.

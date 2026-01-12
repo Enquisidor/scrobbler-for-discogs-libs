@@ -1,0 +1,20 @@
+{
+  "name": "scrobbler-for-discogs-libs",
+  "version": "1.0.0",
+  "description": "Shared business logic for Scrobbler for Discogs (web & mobile)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["discogs", "lastfm", "scrobbler", "vinyl"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.0.6",
+    "typescript": "^5.9.3"
+  }
+}
